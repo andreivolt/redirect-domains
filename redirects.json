@@ -1,4 +1,18 @@
 [
-  { "from": "x.com", "to": "xcancel.com" },
-  { "from": "twitter.com", "to": "xcancel.com" }
+  {
+    "from": ["x.com", "twitter.com"],
+    "to": "xcancel.com"
+  },
+  {
+    "from": [
+      "reddit.com",
+      "www.reddit.com",
+      "new.reddit.com",
+      "np.reddit.com",
+      "amp.reddit.com",
+      "i.reddit.com"
+    ],
+    "to": "old.reddit.com",
+    "exclude": "^/(media|mod|poll|settings|topics|community-points|appeals?|notifications|answers|mail|message/compose|r/[A-Za-z0-9_]+/s/|r/subreddit(/|$))|[?&](new_reddit=true|old_reddit_redirect=1)([&#]|$)"
+  }
 ]
