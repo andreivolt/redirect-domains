@@ -16,7 +16,7 @@
             pname = "redirect-domains";
             version = "0.1.0";
             src = self;
-            npmDepsHash = "sha256-ORP3vMpkgf4eq5pLPs9xjAbEJsUoL5XUSrcUeLp4CDM=";
+            npmDepsHash = "sha256-sIEsoHFCPuYn2Gvj3rQeVhp3VecaaZxjz8TrgHJik+4=";
             npmFlags = [ "--ignore-scripts" ];
             makeCacheWritable = true;
 
@@ -24,6 +24,7 @@
 
             buildPhase = ''
               runHook preBuild
+              npm run icons
               npx wxt prepare
               npx wxt build
               runHook postBuild
